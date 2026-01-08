@@ -1,0 +1,91 @@
+/* ВАЖЛИВО: щоб padding не ламав ширину */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Калькулятор */
+.calculator {
+    background: #2c2c2c;
+    padding: 20px;
+    width: 260px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Поля вводу */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+}
+
+/* Фокус на input */
+input:focus {
+    border-color: #28a745;
+}
+
+/* Клавіатура */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Кнопки */
+button {
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #3a3a3a;
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #4a4a4a;
+}
+
+/* Кнопки операцій */
+button.operator {
+    background: #f0ad4e;
+    color: #000;
+}
+
+button.operator:hover {
+    background: #ec971f;
+}
+
+/* Кнопка розрахунку */
+.calculate {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #28a745;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.calculate:hover {
+    background: #218838;
+}
