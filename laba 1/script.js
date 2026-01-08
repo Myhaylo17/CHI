@@ -1,4 +1,3 @@
-// Глобальний об'єкт
 const data = {
     num1: null,
     num2: null,
@@ -9,7 +8,6 @@ const num1Input = document.getElementById('num1');
 const num2Input = document.getElementById('num2');
 const operatorInput = document.getElementById('operator');
 
-// Збереження даних при втраті фокусу
 num1Input.addEventListener('blur', () => {
     data.num1 = num1Input.value;
 });
@@ -22,7 +20,6 @@ operatorInput.addEventListener('blur', () => {
     data.operator = operatorInput.value;
 });
 
-// Додавання цифр
 function addValue(value) {
     if (operatorInput.value === '') {
         num1Input.value += value;
@@ -33,13 +30,11 @@ function addValue(value) {
     }
 }
 
-// Встановлення операції
 function setOperator(op) {
     operatorInput.value = op;
     data.operator = op;
 }
 
-// Очистка
 function clearAll() {
     num1Input.value = '';
     num2Input.value = '';
@@ -49,7 +44,6 @@ function clearAll() {
     data.operator = null;
 }
 
-// РОЗРАХУНОК (ВСЯ ЛОГІКА ТУТ)
 function calculate() {
     if (
         data.num1 === null || data.num1 === '' ||
