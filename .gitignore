@@ -1,4 +1,12 @@
+
 node_modules/
 .DS_Store
 dist/
 *.log
+
+__pycache__/
+*.pyc
+sql_app.db
+.venv/
+.env
+
