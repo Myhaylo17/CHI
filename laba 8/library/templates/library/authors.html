@@ -1,0 +1,22 @@
+{% extends 'library/base.html' %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Наші автори</h1>
+<div class="row">
+    {% for author in authors %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title text-primary">{{ author.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ author.email|default:"Email не вказано" }}</h6>
+                <p class="card-text">{{ author.bio|truncatewords:15 }}</p>
+            </div>
+            <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                <span class="badge bg-info text-dark">Книг: {{ author.books_count }}</span>
+                <a href="{% url 'author_books' author.id %}" class="btn btn-sm btn-outline-primary">Переглянути книги</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
