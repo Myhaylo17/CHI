@@ -1,0 +1,13 @@
+{
+  "concept_name": "threading",
+  "description": "Threading allows multiple threads to run in one process.",
+  "advantages": [
+    "Lightweight",
+    "Shared memory",
+    "Good for IO-bound tasks"
+  ],
+  "disadvantages": [
+    "Affected by GIL",
+    "Not good for CPU-bound tasks"
+  ]
+}
